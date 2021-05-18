@@ -18,6 +18,11 @@ public class RabbitmqApplication implements CommandLineRunner {
 	
 	@Override
 	public void run(String... args) throws Exception {
-		rabbitTemplate.convertAndSend("TestExchange", "testRouting", "Second message");
+		
+		SimpleMessage simpleMessage = new SimpleMessage();
+		simpleMessage.setName("FirstMessage");
+		simpleMessage.setDescription("simpleDescription");
+		
+		rabbitTemplate.convertAndSend("TestExchange", "testRouting", simpleMessage);
 	}
 }
