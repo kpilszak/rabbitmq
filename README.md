@@ -1,5 +1,3 @@
-# rabbitmq
-Demo project for RabbitMQ
 <h1 align="right">RabbitMQ</h1><br>
 
 ## Table of contents
